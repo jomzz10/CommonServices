@@ -11,8 +11,9 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-@Table(name = "user")
+
 @Entity
+@Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
 public class UserModel {
 	
@@ -90,11 +91,6 @@ public class UserModel {
 		this.modifiedby = modifiedby;
 		this.createdat = createdat;
 		this.modifiedat = modifiedat;
-	}
-	public UserModel( String username, String password) {
-
-		this.username = username;
-		this.password = password;
 	}
 	
 	
